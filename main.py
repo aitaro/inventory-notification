@@ -14,7 +14,7 @@ item_id = '4902370543278'
 
 # ブラウザーを起動
 options = Options()
-options.binary_location = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
+options.binary_location = os.getenv('GOOGLE_CHROME_SHIM')
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 # driver.implicitly_wait(100)
